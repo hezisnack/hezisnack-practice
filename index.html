@@ -1,24 +1,83 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>我的零食小舖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>神祕禾子零食鋪</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .card h3 {
+      margin: 15px 0 10px;
+      font-size: 18px;
+    }
+    .price {
+      color: #e91e63;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-  <h1>🍪 歡迎來到我的零食小舖 🍪</h1>
-  <p>這裡有各種好吃的零食！</p>
+  <header>神祕禾子零食鋪</header>
 
-  <h2>商品列表</h2>
-  <ul>
-    <li>巧克力餅乾 - NT$50</li>
-    <li>水果軟糖 - NT$30</li>
-    <li>韓國泡麵 - NT$70</li>
-  </ul>
+  <div class="container">
+    <!-- 湖池屋海苔 -->
+    <div class="card">
+      <img src="湖池屋 海苔.jpg" alt="湖池屋海苔">
+      <h3>湖池屋 海苔薯片</h3>
+      <div class="price">$39</div>
+      <a href="#" class="btn">加入購物車</a>
+    </div>
+  </div>
 
-  <h2>下單方式</h2>
-  <p>📱 請加 Line 聯絡我：<b>@mysnackshop</b></p>
-  <p>💳 付款方式：Line Pay / ATM 轉帳</p>
-  <p>📦 取貨方式：面交 / 超商寄件</p>
 </body>
 </html>
-
