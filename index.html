@@ -1,105 +1,60 @@
-
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>神祕禾子零食鋪</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-    }
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 15px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-    .card h3 {
-      margin: 15px 0 10px;
-      font-size: 18px;
-    }
-    .price {
-      color: #e91e63;
-      font-size: 20px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 18px;
-      transition: background-color 0.3s;
-    }
-    .btn:hover {
-      background-color: #45a049;
-    }
-    .order-section {
-      text-align: center;
-      margin: 40px 0;
-    }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f9fa; }
+    header { background:#4CAF50; color:#fff; padding:20px; text-align:center; font-size:24px; font-weight:bold; }
+    .container { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:20px; }
+    .card { background:#fff; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:15px; text-align:center; transition:transform .2s; }
+    .card:hover { transform:scale(1.03); }
+    .card img { width:100%; height:200px; object-fit:cover; border-radius:12px; }
+    .card h3 { margin:15px 0 6px; font-size:18px; }
+    .meta { margin:0; font-size:14px; color:#555; }
+    .price { color:#e91e63; font-size:20px; font-weight:bold; margin:10px 0; }
+    .order-section { text-align:center; margin:40px 0 28px; }
+    .btn { display:inline-block; padding:12px 20px; background:#4CAF50; color:#fff; border-radius:8px; text-decoration:none; font-size:18px; transition:background .3s; }
+    .btn:hover { background:#45a049; }
   </style>
 </head>
 <body>
   <header>神祕禾子零食鋪</header>
 
   <div class="container">
-    <!-- 商品 1 -->
+    <!-- 海苔 -->
     <div class="card">
-      <img src="images/koikeya_black.jpg" alt="湖池屋黑胡椒">
-      <h3>湖池屋 黑胡椒薯片</h3>
-      <p>口味：黑胡椒</p>
-      <p>上架日期：2025/09/07</p>
+      <img src="images/湖池屋_海苔.jpg" alt="湖池屋 海苔薯片">
+      <h3>湖池屋 海苔薯片</h3>
+      <p class="meta">口味：海苔</p>
+      <p class="meta">上架日期：2025/09/08</p>
       <div class="price">$39</div>
     </div>
 
-    <!-- 商品 2 -->
+    <!-- 黑胡椒 -->
     <div class="card">
-      <img src="images/koikeya_salt.jpg" alt="湖池屋鹽味">
+      <img src="images/湖池屋_黑胡椒.jpg" alt="湖池屋 黑胡椒薯片">
+      <h3>湖池屋 黑胡椒薯片</h3>
+      <p class="meta">口味：黑胡椒</p>
+      <p class="meta">上架日期：2025/09/08</p>
+      <div class="price">$39</div>
+    </div>
+
+    <!-- 鹽味 -->
+    <div class="card">
+      <img src="images/湖池屋_鹽味.jpg" alt="湖池屋 鹽味薯片">
       <h3>湖池屋 鹽味薯片</h3>
-      <p>口味：鹽味</p>
-      <p>上架日期：2025/09/07</p>
+      <p class="meta">口味：鹽味</p>
+      <p class="meta">上架日期：2025/09/08</p>
       <div class="price">$39</div>
     </div>
   </div>
 
-  <!-- 統一的下單按鈕 -->
+  <!-- 統一的下單按鈕（放最底部） -->
   <div class="order-section">
     <a href="https://forms.gle/LTNmKQy7wBcRTvzR9" target="_blank" class="btn">立即下單</a>
   </div>
-
 </body>
 </html>
 
