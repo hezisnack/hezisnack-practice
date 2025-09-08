@@ -9,31 +9,99 @@
       --accent: #4CAF50;
       --muted: #6b7280;
     }
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f9fa; color:#222; }
-    header { background:var(--accent); color:#fff; padding:20px; text-align:center; font-size:24px; font-weight:700; }
-    .wrap { max-width:1100px; margin:0 auto; padding:20px; }
-    .grid { display:grid; grid-template-columns:repeat(5, 1fr); gap:20px; } /* 一排固定五個 */
+    body {
+      font-family: Arial, sans-serif;
+      margin:0;
+      padding:0;
+      background:#f8f9fa;
+      color:#222;
+    }
+    header {
+      background:var(--accent);
+      color:#fff;
+      padding:20px;
+      text-align:center;
+      font-size:24px;
+      font-weight:700;
+    }
+    .wrap {
+      max-width:1300px;
+      margin:0 auto;
+      padding:20px;
+    }
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(5, 1fr); /* 一排固定五個 */
+      gap:20px;
+    }
     .card {
-      background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06);
-      padding:12px; text-align:center; transition:transform .18s;
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      padding:12px;
+      text-align:center;
+      transition:transform .18s;
     }
-    .card:hover{ transform:translateY(-4px); }
-    .card img { width:100%; height:200px; object-fit:cover; border-radius:10px; display:block; }
-    .card h3 { margin:12px 0 6px; font-size:18px; }
-    .meta { margin:0; color:var(--muted); font-size:14px; }
-    .price { color:#e91e63; font-size:20px; font-weight:700; margin-top:8px; }
-    .order-section { text-align:center; margin:40px 0 60px; }
+    .card:hover {
+      transform:translateY(-4px);
+    }
+    .card img {
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:10px;
+      display:block;
+    }
+    .card h3 {
+      margin:12px 0 6px;
+      font-size:18px;
+    }
+    .meta {
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .price {
+      color:#e91e63;
+      font-size:20px;
+      font-weight:700;
+      margin-top:8px;
+    }
+    .order-section {
+      text-align:center;
+      margin:40px 0 60px;
+    }
     .btn {
-      display:inline-block; padding:12px 22px; background:var(--accent); color:#fff; border-radius:10px;
-      text-decoration:none; font-size:18px; box-shadow:0 6px 14px rgba(76,175,80,0.12);
+      display:inline-block;
+      padding:12px 22px;
+      background:var(--accent);
+      color:#fff;
+      border-radius:10px;
+      text-decoration:none;
+      font-size:18px;
+      box-shadow:0 6px 14px rgba(76,175,80,0.12);
     }
-    .btn:hover { filter:brightness(.95); }
+    .btn:hover {
+      filter:brightness(.95);
+    }
     .contact {
-      background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.04);
+      background:#fff;
+      padding:16px;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.04);
       margin-bottom:40px;
     }
-    footer { text-align:center; color:var(--muted); padding:18px 0 40px; font-size:14px; }
-    @media (max-width:420px){
+    footer {
+      text-align:center;
+      color:var(--muted);
+      padding:18px 0 40px;
+      font-size:14px;
+    }
+    @media (max-width:768px){
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width:480px){
+      .grid { grid-template-columns: 1fr; }
       .card img{ height:160px; }
       .btn{ font-size:16px; padding:10px 16px; }
     }
@@ -71,11 +139,11 @@
         <div class="price">$39</div>
       </article>
 
-            <!-- 商品 D：洗衣球 -->
+      <!-- 商品 D：洗衣球 -->
       <article class="card">
-        <img src="images/green_laundry_eleven_ball.jpg" alt="Areil綠色除臭強化(11入)">
-        <h3>Areil綠色除臭強化(11入)</h3>
-        <p class="meta">功能/顆數：除臭/11入</p>
+        <img src="images/green_laundry_eleven_ball.jpg" alt="Areil 綠色除臭強化(11入)">
+        <h3>Areil 綠色除臭強化(11入)</h3>
+        <p class="meta">功能/顆數：除臭 / 11入</p>
         <p class="meta">上架日期：2025/09/08</p>
         <div class="price">$100</div>
       </article>
@@ -83,7 +151,6 @@
     
     <!-- 統一下單按鈕（在頁面底部） -->
     <div class="order-section">
-      <!-- 如果你以後換表單，只要改 href -->
       <a class="btn" href="https://forms.gle/LTNmKQy7wBcRTvzR9" target="_blank" rel="noopener noreferrer">
         立即下單
       </a>
@@ -92,8 +159,7 @@
       </p>
     </div>
 
-  
-    <!-- 聯絡資訊（可自行編輯） -->
+    <!-- 聯絡資訊 -->
     <div class="contact" aria-label="聯絡資訊">
       <strong>聯絡資訊</strong>
       <p style="margin:8px 0;">📱 手機：0912-345-678</p>
@@ -105,5 +171,3 @@
   <footer>© 神祕禾子零食鋪</footer>
 </body>
 </html>
-
-
