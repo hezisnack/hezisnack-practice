@@ -1,64 +1,97 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>神祕禾子零食鋪</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f9fa; }
-    header { background:#4CAF50; color:#fff; padding:20px; text-align:center; font-size:24px; font-weight:bold; }
-    .container { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:20px; }
-    .card { background:#fff; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:15px; text-align:center; transition:transform .2s; }
-    .card:hover { transform:scale(1.03); }
-    .card img { width:100%; height:200px; object-fit:cover; border-radius:12px; }
-    .card h3 { margin:15px 0 6px; font-size:18px; }
-    .meta { margin:0; font-size:14px; color:#555; }
-    .price { color:#e91e63; font-size:20px; font-weight:bold; margin:10px 0; }
-    .order-section { text-align:center; margin:40px 0 28px; }
-    .btn { display:inline-block; padding:12px 20px; background:#4CAF50; color:#fff; border-radius:8px; text-decoration:none; font-size:18px; transition:background .3s; }
-    .btn:hover { background:#45a049; }
+    :root {
+      --accent: #4CAF50;
+      --muted: #6b7280;
+    }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f9fa; color:#222; }
+    header { background:var(--accent); color:#fff; padding:20px; text-align:center; font-size:24px; font-weight:700; }
+    .wrap { max-width:1100px; margin:0 auto; padding:20px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
+    .card {
+      background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      padding:12px; text-align:center; transition:transform .18s;
+    }
+    .card:hover{ transform:translateY(-4px); }
+    .card img { width:100%; height:200px; object-fit:cover; border-radius:10px; display:block; }
+    .card h3 { margin:12px 0 6px; font-size:18px; }
+    .meta { margin:0; color:var(--muted); font-size:14px; }
+    .price { color:#e91e63; font-size:20px; font-weight:700; margin-top:8px; }
+    .order-section { text-align:center; margin:40px 0 60px; }
+    .btn {
+      display:inline-block; padding:12px 22px; background:var(--accent); color:#fff; border-radius:10px;
+      text-decoration:none; font-size:18px; box-shadow:0 6px 14px rgba(76,175,80,0.12);
+    }
+    .btn:hover { filter:brightness(.95); }
+    .contact {
+      background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.04);
+      margin-bottom:40px;
+    }
+    footer { text-align:center; color:var(--muted); padding:18px 0 40px; font-size:14px; }
+    @media (max-width:420px){
+      .card img{ height:160px; }
+      .btn{ font-size:16px; padding:10px 16px; }
+    }
   </style>
 </head>
 <body>
   <header>神祕禾子零食鋪</header>
 
-  <div class="container">
-    <!-- 海苔 -->
-    <div class="card">
-      <img src="湖池屋_海苔.jpg" alt="湖池屋 海苔薯片">
-      <h3>湖池屋 海苔薯片</h3>
-      <p class="meta">口味：海苔</p>
-      <p class="meta">上架日期：2025/09/08</p>
-      <div class="price">$39</div>
+  <div class="wrap">
+    <section class="grid" aria-label="商品列表">
+      <!-- 商品 A：海苔 -->
+      <article class="card">
+        <img src="images/koikeya_seaweed.jpg" alt="湖池屋 海苔薯片">
+        <h3>湖池屋 海苔薯片</h3>
+        <p class="meta">口味：海苔</p>
+        <p class="meta">上架日期：2025/09/08</p>
+        <div class="price">$39</div>
+      </article>
+
+      <!-- 商品 B：黑胡椒 -->
+      <article class="card">
+        <img src="images/koikeya_black.jpg" alt="湖池屋 黑胡椒薯片">
+        <h3>湖池屋 黑胡椒薯片</h3>
+        <p class="meta">口味：黑胡椒</p>
+        <p class="meta">上架日期：2025/09/08</p>
+        <div class="price">$39</div>
+      </article>
+
+      <!-- 商品 C：鹽味 -->
+      <article class="card">
+        <img src="images/koikeya_salt.jpg" alt="湖池屋 鹽味薯片">
+        <h3>湖池屋 鹽味薯片</h3>
+        <p class="meta">口味：鹽味</p>
+        <p class="meta">上架日期：2025/09/08</p>
+        <div class="price">$39</div>
+      </article>
+    </section>
+
+    <!-- 統一下單按鈕（在頁面底部） -->
+    <div class="order-section">
+      <!-- 如果你以後換表單，只要改 href -->
+      <a class="btn" href="https://forms.gle/LTNmKQy7wBcRTvzR9" target="_blank" rel="noopener noreferrer">
+        立即下單
+      </a>
+      <p style="color:var(--muted); margin-top:12px; font-size:14px;">
+        點選「立即下單」後，請在表單中填寫想購買的商品名稱與數量。
+      </p>
     </div>
 
-    <!-- 黑胡椒 -->
-    <div class="card">
-     <img src="湖池屋_黑胡椒.jpg" alt="湖池屋 黑胡椒薯片">
-      <h3>湖池屋 黑胡椒薯片</h3>
-      <p class="meta">口味：黑胡椒</p>
-      <p class="meta">上架日期：2025/09/08</p>
-      <div class="price">$39</div>
+    <!-- 聯絡資訊（可自行編輯） -->
+    <div class="contact" aria-label="聯絡資訊">
+      <strong>聯絡資訊</strong>
+      <p style="margin:8px 0;">📱 手機：0912-345-678</p>
+      <p style="margin:8px 0;">💬 Line ID：hezisnack123</p>
+      <p style="margin:8px 0;">🏦 匯款帳號：123-456-7890123（台灣銀行）</p>
     </div>
-
-    <!-- 鹽味 -->
-    <div class="card">
-     <img src="湖池屋_鹽味.jpg" alt="湖池屋 鹽味薯片">
-      <h3>湖池屋 鹽味薯片</h3>
-      <p class="meta">口味：鹽味</p>
-      <p class="meta">上架日期：2025/09/08</p>
-      <div class="price">$39</div>
-    </div>
-   </div>
-
-  <!-- 統一的下單按鈕（放最底部） -->
-  <div class="order-section">
-    <a href="https://forms.gle/LTNmKQy7wBcRTvzR9" target="_blank" class="btn">立即下單</a>
   </div>
+
+  <footer>© 神祕禾子零食鋪</footer>
 </body>
 </html>
-
-
-
-
-
